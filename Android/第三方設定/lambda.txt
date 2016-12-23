@@ -8,3 +8,11 @@ apply plugin: 'me.tatarka.retrolambda'
 	
 ======gradle(project name)
 classpath 'me.tatarka:gradle-retrolambda:3.2.4'   //<=dependencies 
+
+
+EX:
+    Button btn;
+
+    btn.setOnClickListener(v -> {
+
+    });
