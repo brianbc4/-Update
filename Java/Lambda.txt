@@ -1,0 +1,14 @@
+before:
+
+Runnable runnbale = new Runnable() {
+	    public void run() {
+	    	System.out.println("run me!");
+	    }
+	};
+
+
+
+
+after:
+
+Runnable runnbale = () -> System.out.println("run me!");

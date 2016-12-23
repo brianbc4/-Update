@@ -1,0 +1,21 @@
+============XML============
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        />
+
+
+============Java============
+
+private ProgressBar progressBar;
+progressBar = (ProgressBar) findViewById(R.id.progress);
+
+
+progressBar.setVisibility(View.VISIBLE);
+
+public void onClick(View v) {
+        progressBar.setVisibility(View.VISIBLE);
+    }

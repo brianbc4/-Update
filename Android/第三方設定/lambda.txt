@@ -1,0 +1,10 @@
+======gradle(apop)
+apply plugin: 'me.tatarka.retrolambda'
+
+    compileOptions {   //<= under android
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+	
+======gradle(project name)
+classpath 'me.tatarka:gradle-retrolambda:3.2.4'   //<=dependencies 

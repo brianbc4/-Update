@@ -1,0 +1,2 @@
+setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);  //««ª½
+setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); //¾î¦V

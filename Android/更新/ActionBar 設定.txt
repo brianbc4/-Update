@@ -1,0 +1,32 @@
+//=========================不顯示ActionBar========================//
+
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+
+        <item name = "android:windowNoTitle">true</item>   <==加入此行
+
+    </style>
+
+</resources>
+
+//====================================================
+<manifest
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"  <==加入此行
+							>
+
+
+//=========================不顯示ActionBar上的名稱========================//
+
+getActionBar().setDisplayShowTitleEnabled(false);
+
+		or
+
+ requestWindowFeature(Window.FEATURE_NO_TITLE);
+ setContentView(R.layout."Layout名稱");

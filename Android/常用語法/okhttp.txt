@@ -1,0 +1,54 @@
+Gradle:
+compile 'com.squareup.okhttp3:okhttp:3.5.0'
+
+
+/*import*/
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSession;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+
+//==================public class HttpConnect ==========================//
+
+public class HttpConnect {
+    OkHttpClient client = new OkHttpClient.Builder()
+//            .hostnameVerifier(new HostnameVerifier() {    /*Skip SSL*/
+//                @Override
+//                public boolean verify(String hostname, SSLSession session) {
+//                    return true;
+//                }
+//            })
+            .build();
+
+    String run(String url) throws IOException {
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+        try (Response response = client.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                return response.body().string();
+            } else {
+                throw new IOException("Unexpected code " + response);
+            }
+        }
+    }
+}
+
+//==================MainActivity ==========================//
+
+
+final HttpConnect connect = new HttpConnect();
+connect.run("URL");
+
+
+
+
+
+
+
+
+
+

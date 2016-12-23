@@ -1,0 +1,23 @@
+//====================權限========================
+
+<uses-permission android:name="android.permission.INTERNET" />
+
+
+//====================XML========================
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/webView" />
+
+
+//====================Java========================
+
+        final WebView myWebView = (WebView) findViewById(R.id.webView);
+        myWebView.loadUrl("網址....");
+        myWebView.setWebViewClient(new WebViewClient());  //讓WebView可以在排版上
+
+
+	/*開啟JavaScript的使用功能*/
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);

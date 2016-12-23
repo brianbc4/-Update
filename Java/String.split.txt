@@ -1,0 +1,24 @@
+String str = "aaa:bbb:ccc:ddd";
+String[] tokens = str.split(":");
+for (String token:tokens) {
+    System.out.println(token);
+}
+
+output:
+aaa
+bbb
+ccc
+ddd
+
+
+String str = "aaa:bbb-ccc_ddd";
+String[] tokens = str.split(":|-|_");
+for (String token:tokens) {
+    System.out.println(token);
+}
+
+output:
+aaa
+bbb
+ccc
+ddd

@@ -1,0 +1,8 @@
+Format: Ctrl + Alt + L
+
+Edit all the same words: Shift + F6
+
+列出所有還可以複寫方法:  Ctrl+O
+
+列出所有方法:Ctrl+F12
+

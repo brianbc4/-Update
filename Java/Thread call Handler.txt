@@ -1,0 +1,87 @@
+import android.os.Handler;
+
+
+//=======================第一種寫法==========================
+void beginListenForData() {
+        
+        final Handler handler = new Handler();
+		final Thread  workerThread;
+        workerThread = new Thread(new Runnable() {
+            public void run() {
+
+			//////////放入要執行Thread/////////
+
+                    handler.post(new Runnable() {
+                        public void run() {
+                        //////////放入要執行的Handler/////////
+                        }
+                    });
+    } 
+
+});
+        workerThread.start();
+        }
+		
+		
+//=======================第二種寫法==========================
+
+		void beginListenForData() {
+
+        final Message mes= new Message();
+        final Handler  handler;
+        final Thread  workerThread;
+
+        handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+
+                tx.setText(msg.what + "");   //UI上顯示數字
+
+            }
+        };
+
+
+        workerThread = new Thread(new Runnable() {
+            public void run() {
+				
+                // 在執行緒裏執行長耗時方法
+                for(int i=1;i<=51;i++){
+                    try {
+                        Thread.sleep(500);  //暫停半秒
+                    }
+                    catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    mes.what=i*2;
+
+                    if(mes.what<=100) {
+                        pd.setProgress(mes.what); //將值給進度條
+
+                        handler.sendEmptyMessage(mes.what);  //將值傳給Handler做處理
+
+                    }
+                }
+            }
+        });
+        workerThread.start();
+    }
+            
+			
+		
+		
+//==================================================================	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

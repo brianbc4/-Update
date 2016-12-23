@@ -1,0 +1,17 @@
+//=================基本指令==========================
+
+git branch <new_branch_name> 建立本地 local branch
+git branch -m <old_name> <new_name> 改名字 (如果有同名會失敗，改用 -M 可以強制覆蓋)
+git branch 列出目前有那些 branch 以及目前在那個 branch
+git checkout <branch_name> 切換 branch (注意到如果你有檔案修改了卻還沒 commit，會不能切換 branch，解法稍後會談)
+git checkout -b <new_branch_name> (<from_branch_name>) 本地建立 branch 並立即 checkout 切換過去
+git branch -d <branch_name> 刪除 local branch
+git reset HEAD^^ --hard  回復至前兩個commit前的版本
+
+
+//=================退出VI==========================
+shift + q (輸入指令模式)
+:q!(退出)
+//===============================================
+
+
