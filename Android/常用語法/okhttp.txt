@@ -41,8 +41,10 @@ public class HttpConnect {
 
 
 final HttpConnect connect = new HttpConnect();
-connect.run("URL");
 
+//放入執行緒
+String json_str = connect.run("URL");
+//----------
 
 
 
