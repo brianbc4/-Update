@@ -1,5 +1,10 @@
 x ? y : z ;
 
+        String x;
+        boolean w=true;
+        x= w==true?"s":"e";
+
+
 if(x) 
 	return y;
 else          
